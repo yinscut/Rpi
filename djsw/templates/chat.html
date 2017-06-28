@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <meta charset="UTF-8">
+    <title>东江水务点餐系统</title>
+</head>
+<script src="/static/jquery-3.2.1.min.js"></script>
+<script>
+    setInterval("timer.innerHTML=new Date().toLocaleString()");
+    window.onload = function (){setInterval("timer.innerHTML=new Date().toLocaleString()",1000);};
+    $(document).ready(function () {
+        $("div").css({"border-style":"solid","border-color":"deepskyblue"});
+        $("input").css({"width":"150px","height":"30px"});
+        $("button").css({"width":"100px","height":"45px","background-color":"deepskyblue"})
+        socket = new WebSocket("ws://" + "yinscut.imwork.net:8699" + "/djsw/");
+        socket.onmessage = function(e) {
+                    alert(e.data);
+                };
+        socket.onopen = function() {
+            socket.send("hello world");
+        };
+        // Call onopen directly if socket is already open
+        if (socket.readyState == WebSocket.OPEN) socket.onopen();
+    })
+</script>
+<body>
+<h3>第五水厂点餐系统欢迎您！</h3>
+<div id="timer"></div>
+<p>{% if request.user.is_authenticated %}<a href="/userbook/">订餐</a> <a href="/usercheck/">查询</a> <a href="/usermenu/">菜单</a> <a href="/userhelp/">帮助</a> <a href="/useruser/">{{ request.user }}</a> <a href="/userlogout/">退出</a>{% else %}<a href="/">登陆</a> <a href="/userregister/">注册</a>  <a href="/usermenu/">菜单</a> <a href="/userhelp/">帮助</a>{% endif %}</p>
+<div id="id_div_userchat">
+
+</div>
+<div id="id_div_status">
+    <p>{{ status }}</p>
+</div>
+</body>
+</html>

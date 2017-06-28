@@ -1,0 +1,8 @@
+<!-- footer.html -->
+{% block footer %}
+    {% if now %}
+    <p> {{ now }}</p>
+    {% else %}
+    <p>本文来自</p>
+    {% endif %}
+{% endblock %}

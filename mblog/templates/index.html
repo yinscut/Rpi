@@ -1,0 +1,12 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+{% block title %} 欢迎光临 {% endblock %}
+{% block headmessage %}
+    <h3>文章</h3>
+    <a href='/'>回首页</a>
+{% endblock %}
+{% block content %}
+    {% for post in posts %}
+    <p><a href='/post/{{post.slug}}'>{{ post.title}}</a></p>
+    {% endfor %}
+{% endblock %}

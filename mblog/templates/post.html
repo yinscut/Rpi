@@ -1,0 +1,13 @@
+<!-- post.html -->
+{% extends 'base.html' %}
+{% load markdown_deux_tags %}
+{% block title %} {{ post.title }} -文学天地 {% endblock %}
+{% block headmessage %}
+    <h3>{{ post.title }}</h3>
+    <a href='/'>回首页</a>
+{% endblock %}
+{% block content %}
+    <p>
+        {{ post.body| markdown }}
+    </p>
+{% endblock %}

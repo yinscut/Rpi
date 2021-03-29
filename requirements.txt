@@ -74,7 +74,7 @@ py==1.4.34
 pycparser==2.17
 pyDes==2.0.1
 pygame==1.9.2a0
-Pygments==2.2.0
+Pygments==2.7.4
 pygobject==3.14.0
 pyinotify==0.9.6
 pynfc==0.0.2

@@ -70,7 +70,7 @@ ply==3.4
 prompt-toolkit==1.0.14
 psutil==5.2.2
 ptyprocess==0.5.1
-py==1.4.34
+py==1.10.0
 pycparser==2.17
 pyDes==2.0.1
 pygame==1.9.2a0

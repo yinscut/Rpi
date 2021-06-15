@@ -102,7 +102,7 @@ spidev==3.0
 stevedore==1.23.0
 terminado==0.6
 testpath==0.3.1
-thefuck==3.18
+thefuck==3.31
 timeout-decorator==0.3.3
 tornado==4.5.1
 traitlets==4.3.2

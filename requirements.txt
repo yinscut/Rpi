@@ -49,7 +49,7 @@ nbconvert==5.2.1
 nbformat==4.3.0
 ndeflib==0.2.0
 nfcpy==0.13.0
-notebook==5.0.0
+notebook==6.4.10
 numpy==1.13.0
 olefile==0.44
 omxplayer-wrapper==0.2.3

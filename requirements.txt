@@ -50,7 +50,7 @@ nbformat==4.3.0
 ndeflib==0.2.0
 nfcpy==0.13.0
 notebook==5.0.0
-numpy==1.13.0
+numpy==1.21.0
 olefile==0.44
 omxplayer-wrapper==0.2.3
 optionaldict==0.1.1

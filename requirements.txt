@@ -45,7 +45,7 @@ MarkupSafe==1.0
 mcpi==0.1.1
 mistune==0.7.4
 msgpack-python==0.4.8
-nbconvert==5.2.1
+nbconvert==6.3.0
 nbformat==4.3.0
 ndeflib==0.2.0
 nfcpy==0.13.0
